@@ -1,13 +1,18 @@
+import { NextPage } from "next";
+import React from "react";
+
 const BackendUrl = `https://swayamhealth.info/api`;
 
-export default function App() {
+const App: NextPage = () => {
   return <div>Request type - </div>;
-}
+};
 
-// export async function getServerSideProps() {
-//   const res = await fetch(`${BackendUrl}/category/gettestfromkiosk/MUMSAN2`, {
-//     method: "GET",
-//   });
-//   const data = await res.json();
-//   return { props: { data } };
-// }
+export default App;
+
+export async function getServerSideProps() {
+  const res = await fetch(`${BackendUrl}/category/gettestfromkiosk/MUMSAN2`, {
+    method: "GET",
+  });
+  const data = await res.json();
+  return { props: { data } };
+}

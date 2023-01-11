@@ -7,13 +7,17 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const response = await fetch(
-    `${BackendUrl}/category/gettestfromkiosk/MUMSAN2`,
-    {
-      method: "GET",
-    }
-  );
-  const data = await response.json();
-  console.log("data", data);
-  res.status(200).json(data);
+  // const response = await fetch(
+  //   `${BackendUrl}/category/gettestfromkiosk/MUMSAN2`,
+  //   {
+  //     method: "GET",
+  //   }
+  // );
+  // const data = await response.json();
+  // console.log("data", data);
+  // res.status(200).json(data);
+
+  res.json({
+    name: "Mistry Aakash",
+  });
 }
